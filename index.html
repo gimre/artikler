@@ -17,8 +17,8 @@
                 render( ) {
                     const { words } = this.props
                     return React.createElement( 'ul', null,
-                        words.map( word =>
-                            React.createElement( 'li', null, word )
+                        words.map( ( { spelling, genre } ) =>
+                            React.createElement( 'li', null, spelling )
                         )
                     )
                 }
