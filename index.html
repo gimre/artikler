@@ -13,14 +13,15 @@
             src="./react-dom.min.js">
         </script>
         <script type="text/javascript">
+            const R = ( type, children, props = null ) =>
+                React.createElement( type, props, children )
+
             class ArticleSearch extends React.Component {
                 render( ) {
                     const { words } = this.props
-                    return React.createElement( 'ul', null,
-                        words.map( ( { spelling, genre } ) =>
-                            React.createElement( 'li', null, spelling )
-                        )
-                    )
+                    return R( 'ul', words.map( ( { spelling, genre } ) =>
+                        R( 'li', spelling )
+                    ) )
                 }
             }
 

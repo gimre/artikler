@@ -1,8 +1,8 @@
 [
-    { "spelling": "Häftling", "genre": "male" },
-    { "spelling": "Frühling", "genre": "male" },
     { "spelling": "Flüchtling", "genre": "male" },
-    { "spelling": "Säugling", "genre": "male" },
+    { "spelling": "Frühling", "genre": "male" },
+    { "spelling": "Häftling", "genre": "male" },
     { "spelling": "Lehrling", "genre": "male" },
+    { "spelling": "Säugling", "genre": "male" },
     { "spelling": "Zwilling", "genre": "male" } 
 ]
