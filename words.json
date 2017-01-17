@@ -1,8 +1,32 @@
 [
-    { "spelling": "Flüchtling", "genre": "male" },
-    { "spelling": "Frühling", "genre": "male" },
-    { "spelling": "Häftling", "genre": "male" },
-    { "spelling": "Lehrling", "genre": "male" },
-    { "spelling": "Säugling", "genre": "male" },
-    { "spelling": "Zwilling", "genre": "male" } 
+    {
+        "genre": "male",
+        "raw": "fluchtling",
+        "spelling": "Flüchtling"
+    },
+    {
+        "genre": "male",
+        "raw": "fruhling",
+        "spelling": "Frühling"
+    },
+    {
+        "genre": "male",
+        "raw": "haftling",
+        "spelling": "Häftling"
+    },
+    {
+        "genre": "male",
+        "raw": "lehrling",
+        "spelling": "Lehrling"
+    },
+    {
+        "genre": "male",
+        "raw": "saugling",
+        "spelling": "Säugling"
+    },
+    {
+        "genre": "male",
+        "raw": "zwilling",
+        "spelling": "Zwilling"
+    } 
 ]

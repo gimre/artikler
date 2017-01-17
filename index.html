@@ -25,6 +25,10 @@
                     }
                 }
 
+                componentDidMount( ) {
+                    this.refs.searchInput.focus( )
+                }
+
                 render( ) {
                     const { words }      = this.props
                     const { searchText } = this.state
@@ -35,7 +39,8 @@
                             value: searchText
                         } ),
                         R( 'ul', words
-                            .filter( ( { spelling } ) =>
+                            .filter( ( { raw, spelling } ) =>
+                                ~ raw.indexOf( searchText ) ||
                                 ~ spelling.indexOf( searchText ) )
                             .map( ( { spelling } ) =>
                                 R( 'li', spelling ) )
