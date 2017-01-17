@@ -30,7 +30,7 @@
                     const { searchText } = this.state
                     return R( 'div', [
                         R( 'input', null, {
-                            onKeyUp: this.onSearchChange( ),
+                            onChange: this.onSearchChange( ),
                             ref: 'searchInput',
                             value: searchText
                         } ),
