@@ -17,15 +17,35 @@
                 React.createElement( type, props, children )
 
             class ArticleSearch extends React.Component {
+
+                constructor( ) {
+                    super( )
+                    this.state = {
+                        searchText: ''
+                    }
+                }
+
                 render( ) {
-                    const { words } = this.props
+                    const { words }      = this.props
+                    const { searchText } = this.state
                     return R( 'div', [
-                        R( 'input' ),
-                        R( 'ul', words.map( ( { spelling, genre } ) =>
-                            R( 'li', spelling )
-                        ) ),
+                        R( 'input', {
+                            onKeydown: ( ) => this.onSearchChange,
+                            ref: 'searchInput',
+                            value: searchText
+                        } ),
+                        R( 'ul', words
+                            .filter( ( { spelling } ) =>
+                                ~ spelling.indexOf( searchText ) )
+                            .map( ( { spelling } ) =>
+                                R( 'li', spelling ) )
+                        ),
                     ] )
-                        
+                }
+
+                onSearchChange( ) {
+                    const { searchInput: { value: searchText } } = this.refs
+                    this.setState( { searchText } )
                 }
             }
 
