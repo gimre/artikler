@@ -25,7 +25,8 @@
             }
 
             fetch( './words.json' )
-                .then( words => ReactDOM.render(
+                .then( response => response.json( ) )
+                .then( words    => ReactDOM.render(
                     React.createElement( ArticleSearch, { words } ),
                     document.querySelector( '#root' )
                 ) )
