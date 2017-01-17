@@ -19,9 +19,13 @@
             class ArticleSearch extends React.Component {
                 render( ) {
                     const { words } = this.props
-                    return R( 'ul', words.map( ( { spelling, genre } ) =>
-                        R( 'li', spelling )
-                    ) )
+                    return R( 'div', [
+                        R( 'input' ),
+                        R( 'ul', words.map( ( { spelling, genre } ) =>
+                            R( 'li', spelling )
+                        ) ),
+                    ] )
+                        
                 }
             }
 
