@@ -4,6 +4,8 @@
         <title>German article reference</title>
     </head>
     <body>
+        <div id="root"></div>
+
         <script type="text/javascript"
             src="./react.min.js">
         </script>
@@ -23,7 +25,10 @@
             }
 
             fetch( './words.json' )
-                .then( words => ReactDOM.render( ArticleSearch, { words } ) )
+                .then( words => ReactDOM.render(
+                    React.createElement( ArticleSearch, { words } ) ),
+                    document.querySelector( 'root' )
+                )
         </script>
     </body>
 </html>
