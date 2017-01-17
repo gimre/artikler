@@ -29,7 +29,7 @@
                     const { words }      = this.props
                     const { searchText } = this.state
                     return R( 'div', [
-                        R( 'input', {
+                        R( 'input', null, {
                             onKeydown: ( ) => this.onSearchChange,
                             ref: 'searchInput',
                             value: searchText
