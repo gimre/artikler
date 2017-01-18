@@ -21,7 +21,7 @@
 
             const removeSpecial = ( word ) => {
                 word.replace( /[^\u0000-\u007E]/g, ( c ) =>
-                    Lexics.baseLetter[ c ] )
+                    Lexics.baseLetters[ c ] )
             }
 
             const index = ( words ) =>
