@@ -53,7 +53,7 @@
                             value: searchText
                         } ),
                         R( 'ul', words
-                            .filter( ( { raw, spelling } ) =>
+                            .filter( ( { withSpecial, withoutSpecial } ) =>
                                 ~ withSpecial.indexOf( searchText ) ||
                                 ~ withoutSpecial.indexOf( searchText ) )
                             .map( ( { spelling } ) =>
