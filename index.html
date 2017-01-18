@@ -54,8 +54,8 @@
                         } ),
                         R( 'ul', words
                             .filter( ( { raw, spelling } ) =>
-                                ~ raw.indexOf( searchText ) ||
-                                ~ spelling.indexOf( searchText ) )
+                                ~ withSpecial.indexOf( searchText ) ||
+                                ~ withoutSpecial.indexOf( searchText ) )
                             .map( ( { spelling } ) =>
                                 R( 'li', spelling ) )
                         ),
