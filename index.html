@@ -12,9 +12,23 @@
         <script type="text/javascript"
             src="./react-dom.min.js">
         </script>
+        <script type="text/javascript"
+            src="./letters.js">
+        </script>
         <script type="text/javascript">
             const R = ( type, children, props = null ) =>
                 React.createElement( type, props, children )
+
+            const removeSpecial = ( word ) => {
+                word.replace( /[^\u0000-\u007E]/g, ( c ) =>
+                    Lexics.baseLetter[ c ] )
+            }
+
+            const index = ( words ) =>
+                words.map( word => Object.assign( { }, word, {
+                    withSpecial: word.spelling.toLowerCase( ),
+                    withoutSpecial: removeSpecial( word.spelling )
+                } ) )
 
             class ArticleSearch extends React.Component {
 
@@ -58,6 +72,7 @@
 
             fetch( './words.json' )
                 .then( response => response.json( ) )
+                .then( words    => index( words ) )
                 .then( words    => ReactDOM.render(
                     React.createElement( ArticleSearch, { words } ),
                     document.querySelector( '#root' )

@@ -1,32 +1,26 @@
 [
     {
         "genre": "male",
-        "raw": "fluchtling",
         "spelling": "Flüchtling"
     },
     {
         "genre": "male",
-        "raw": "fruhling",
         "spelling": "Frühling"
     },
     {
         "genre": "male",
-        "raw": "haftling",
         "spelling": "Häftling"
     },
     {
         "genre": "male",
-        "raw": "lehrling",
         "spelling": "Lehrling"
     },
     {
         "genre": "male",
-        "raw": "saugling",
         "spelling": "Säugling"
     },
     {
         "genre": "male",
-        "raw": "zwilling",
         "spelling": "Zwilling"
     } 
 ]
