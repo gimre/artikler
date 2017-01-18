@@ -19,10 +19,9 @@
             const R = ( type, children, props = null ) =>
                 React.createElement( type, props, children )
 
-            const removeSpecial = ( word ) => {
+            const removeSpecial = ( word ) =>
                 word.replace( /[^\u0000-\u007E]/g, ( c ) =>
                     Lexics.baseLetters[ c ] )
-            }
 
             const index = ( words ) =>
                 words.map( word => Object.assign( { }, word, {
